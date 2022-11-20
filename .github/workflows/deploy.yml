@@ -40,4 +40,4 @@ jobs:
     steps:
       - name: Output information
         run: |        
-          "MONGODB_DB_NAME: $MONGODB_DB_NAME"
+          echo "MONGODB_DB_NAME: $MONGODB_DB_NAME"
