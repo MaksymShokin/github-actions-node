@@ -32,11 +32,12 @@ jobs:
         run: npm test
       - name: Output information
       # another way to access environment variable is to use env context
-        run: echo "MONGODB_USERNAME: ${{ env.MONGODB_USERNAME }}"
+        run: |
+          echo "MONGODB_USERNAME: ${{ env.MONGODB_USERNAME }}"
   deploy:
     needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Output information
         run: |        
-          echo "..."
+          "MONGODB_DB_NAME: $MONGODB_DB_NAME"
